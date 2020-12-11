@@ -11,7 +11,7 @@ public class Switch : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
     {
             LightswitchOnOff(); //space to switch
-            SoundScript.PlaySound();
+            SoundScript.PlaySound(); // call the SoundScript to play the sound
         }
     }
 

@@ -9,14 +9,14 @@ public class EnemyController : MonoBehaviour
     public float chaseRadius;
     public float moveSpeed;
 
-    // Start is called before the first frame update
+    // Get Rigidbody2D and find a target with the tag "Player"
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         target = GameObject.FindWithTag("Player").transform;
     }
 
-    // Update is called once per frame
+    // Sets radius, within which the player gets chased
     void FixedUpdate()
     {
         CheckDistance();

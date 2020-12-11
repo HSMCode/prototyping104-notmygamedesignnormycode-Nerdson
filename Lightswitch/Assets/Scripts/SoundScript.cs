@@ -8,7 +8,7 @@ public class SoundScript : MonoBehaviour
     public static AudioClip ghostSound;
     static AudioSource audioSrc;
 
-    // Start is called before the first frame update
+    // Loading the soundfiles from the "Resources" folder
     void Start()
     {
         switchSound = Resources.Load<AudioClip>("Light Switch Click On Sfx");
@@ -16,7 +16,7 @@ public class SoundScript : MonoBehaviour
         audioSrc = GetComponent<AudioSource>();
     }
 
-
+    // Public voids that get called from other scripts to play the sounds
     public static void PlaySound()
     {
         audioSrc.PlayOneShot(switchSound);
